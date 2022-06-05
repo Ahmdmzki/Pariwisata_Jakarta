@@ -51,5 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'wisata';
 $route['TMII'] = 'wisata/TMII';
+$route['TMII'] = 'wisata/dufan';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
