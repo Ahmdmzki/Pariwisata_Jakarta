@@ -53,8 +53,6 @@
             <li><a href="#banner">Home</a></li>
               <li><a href="#todo">Wisata</a></li>
               <li><a href="#video-sec">Video</a></li>
-              <li><a href="#location">Lokasi</a></li>
-              <li><a href="#hotels">Hotel</a></li>
               <li><a href="#contact-sec">Kontak Kami</a></li>
               <li><a href="#tentang">Tentang Kami</a></li>
           </ul>
@@ -101,8 +99,10 @@
           </div>
           <h3>MoJa Museum</h3>
           <p>Komplek Gelora Bung Karno, Main Stadium, Jl. Gerbang Pemuda No.1, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+          <a href="TMII" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
+      
 
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
         <div class="feature-thumb">
@@ -111,6 +111,7 @@
           </div>
           <h3>Monumen Nasional</h3>
           <p>Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta</p>
+          <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
 
@@ -121,6 +122,7 @@
           </div>
            <h3>Kota Tua</h3>
            <p>Mangga Besar, Kec. Taman Sari, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta</p>
+           <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
     </div>  
@@ -131,6 +133,7 @@
           </div>
           <h3>Dunia Fantasi</h3>
           <p>Jl. Lodan Timur No.7, RW.10, Ancol, Kec. Pademangan, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14430</p>
+          <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
 
@@ -141,6 +144,7 @@
           </div>
           <h3>Taman Impian Jaya Ancol</h3>
           <p>Jl. Lodan Timur No.7, RW.10, Ancol, Kec. Pademangan, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14430</p>
+          <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
 
@@ -151,6 +155,7 @@
           </div>
            <h3>Taman Mini Indonesia Indah</h3>
            <p>Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</p>
+           <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
     </div>
   </div>
@@ -172,183 +177,6 @@
     </div>
 </section>
 
-<!------------ Menu section ------------>
-<section id="location" class="parallax">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
-         <div class="wow fadeInUp section-title" data-wow-delay="1s">
-            <h2>Lokasi Wisata Dengan Rating Tinggi <small>Setiap hari itu adalah perjalanan</small></h2>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <div class="media wow fadeInUp" data-wow-delay="0.5s">
-          <div class="media-middle">
-            <img src="assets/img/icon6.jpg" class="img-responsive" alt="Kota Tua">
-          </div>
-          <div class="media-body">
-            <h3 class="media-heading">Taman Mini Indonesia Indah</h3>
-            <p></p>
-              <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
-          </div>
-        </div>
-
-        <div class="media wow fadeInUp" data-wow-delay="0.9s">
-          <div class="media-middle ">
-            <img src="assets/img/icon5.jpg" class="img-responsive" alt="">
-          </div>
-          <div class="media-body">
-            <h3 class="media-heading">Dunia Fantasi</h3>
-            <p>Eiffel Tower and Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré</p>
-             <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <div class="media wow fadeInUp" data-wow-delay="0.5s">
-          <div class="media-middle">
-            <img src="assets/img/icon3.png" class="img-responsive" alt="">
-           </div>
-          <div class="media-body">
-            <h3 class="media-heading">Kota Tua</h3>
-            <p>At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers</p>
-              <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!------------ Gallery section ------------>
-<section id="hotels" class="parallax">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-12">
-
-       <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
-         <div class="wow fadeInUp section-title" data-wow-delay="1s">
-            <h2>Best Hotels out there<small>The great advantage of a hotel is that it is a refuge from home life.</small></h2>
-        </div>
-      </div>
-        
-          <!-- iso section -->
-          <div class="iso-section wow fadeInUp text-center" data-wow-delay="0.5">
-
-            		<ul class="filter-wrapper clearfix">
-                        <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".london">London</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".paris">Paris</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".ny">New York</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".hn">Hong Kong</a></li>
-                    </ul>
-
-                    <!-- iso box section -->
-                    <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
-                      <div class="iso-box-wrapper col4-iso-box">
-
-                        <div class="iso-box london paris ny col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-01.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-01.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name</h3>
-                        </div>
-
-                        <div class="iso-box london ny hn col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-02.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-02.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name Two</h3>
-                        </div>
-
-                        <div class="iso-box hn col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-03.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-03.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name Three</h3>
-                        </div>
-
-                        <div class="iso-box london col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-04.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-04.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name Four</h3>
-                        </div>
-
-                        <div class="iso-box ny col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-05.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-05.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name Five</h3>
-                        </div>
-
-                        <div class="iso-box paris lunch col-md-4 col-sm-6">
-                          <div class="gallery-thumb">
-                            <a href="images/hotel-06.jpg" data-lightbox-gallery="food-gallery">
-                              <img src="images/hotel-06.jpg" class="fluid-img" alt="Gallery">
-                                <div class="gallery-overlay">
-                                  <div class="gallery-item">
-                                    <i class="fa fa-search"></i>
-                                  </div>
-                                </div>
-                            </a>
-                          </div>
-                          <h3>Hotel Name Six</h3>
-                        </div>
-
-                       </div>
-                    </div>
-
-          </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!----Tentang Kami---->
 <section id="tentang" class="parallax">
