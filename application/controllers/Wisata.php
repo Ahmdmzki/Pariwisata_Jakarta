@@ -10,4 +10,9 @@ class Wisata extends CI_Controller
     {
         $this->load->view('TMII');
     }
+	
+	public function TMII()
+    {
+        $this->load->view('dufan');
+    }
 }

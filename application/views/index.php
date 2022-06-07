@@ -133,7 +133,7 @@
           </div>
           <h3>Dunia Fantasi</h3>
           <p>Jl. Lodan Timur No.7, RW.10, Ancol, Kec. Pademangan, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14430</p>
-          <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+          <a href="application/views/dufan" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
         </div>
       </div>
 
