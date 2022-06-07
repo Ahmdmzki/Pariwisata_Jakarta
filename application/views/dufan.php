@@ -93,7 +93,7 @@
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="feature-thumb">
           <div class="icon">
-             <span><img class="img-responsive" src="assets/img/dufan1.jpg"/></span>
+             <span><img class="img-responsive" src="https://commons.wikimedia.org/wiki/File:Dufan1.jpg"/></span>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="feature-thumb">
           <div class="icon">
-             <span><img class="img-responsive" src="assets/img/dufan2.png"/></span>
+             <span><img class="img-responsive" src="https://commons.wikimedia.org/wiki/File:Dufan2.webp"/></span>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="feature-thumb">
           <div class="icon">
-             <span><img class="img-responsive" src="assets/img/dufan3.png"/></span>
+             <span><img class="img-responsive" src="https://commons.wikimedia.org/wiki/File:Dufan3.webp"/></span>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
       <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="feature-thumb">
           <div class="icon">
-             <span><img class="img-responsive" src="assets/img/dufan4.jpg"/></span>
+             <span><img class="img-responsive" src="https://commons.wikimedia.org/wiki/File:Dufan4.jpg"/></span>
           </div>
         </div>
       </div>
