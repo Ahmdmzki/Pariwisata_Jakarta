@@ -10,8 +10,19 @@ class Wisata extends CI_Controller
     {
         $this->load->view('TMII');
     }
+<<<<<<< Updated upstream
 	
 	public function TMII()
+=======
+<<<<<<< Updated upstream
+
+
+    public function login()
+=======
+	
+	public function dufan()
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     {
         $this->load->view('dufan');
     }

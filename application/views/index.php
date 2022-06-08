@@ -99,7 +99,11 @@
           </div>
           <h3>MoJa Museum</h3>
           <p>Komplek Gelora Bung Karno, Main Stadium, Jl. Gerbang Pemuda No.1, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270</p>
+<<<<<<< Updated upstream
           <a href="TMII" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+=======
+          <a href="#" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+>>>>>>> Stashed changes
         </div>
       </div>
       
@@ -133,7 +137,11 @@
           </div>
           <h3>Dunia Fantasi</h3>
           <p>Jl. Lodan Timur No.7, RW.10, Ancol, Kec. Pademangan, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14430</p>
+<<<<<<< Updated upstream
           <a href="application/views/dufan" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+=======
+          <a href="dufan" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+>>>>>>> Stashed changes
         </div>
       </div>
 

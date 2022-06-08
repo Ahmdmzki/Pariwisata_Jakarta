@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+$route['default_controller'] = 'Wisata/home';
+$route['login'] = 'Wisata/login';
+$route['(:any)'] = 'Wisata/view_lokasi/$1';
+=======
+>>>>>>> Stashed changes
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -51,6 +59,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'wisata';
 $route['TMII'] = 'wisata/TMII';
+<<<<<<< Updated upstream
 $route['TMII'] = 'wisata/dufan';
+=======
+$route['dufan'] = 'wisata/dufan';
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
