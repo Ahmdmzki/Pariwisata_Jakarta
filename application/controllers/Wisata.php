@@ -1,18 +1,43 @@
 <?php
+
+
+/**
+ * Mengatur halaman yang akan ditampilkan
+ *
+ * @author Herdy Hardiyant
+ */
+
 class Wisata extends CI_Controller
 {
-    public function index()
+
+    public function home($title = 'home')
     {
-        $this->load->view('index');
+        $this->load->view('templates/header');
+        $this->load->view('pages/home');
+        $this->load->view('templates/footer');
     }
 
-    public function TMII()
+    public function view_lokasi($nama_lokasi)
     {
-        $this->load->view('TMII');
+
+        $lokasiPariwisata = new LokasiPariwisata();
+        $data = $lokasiPariwisata->ambilDataLokaisPariwisata($nama_lokasi);
+
+        if (!$data) {
+            echo "<h1>Lokasi tidak tersedia</h1>";
+            return;
+        }
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/lokasi_wisata', $data);
+        $this->load->view('templates/footer', $data);
     }
-	
-	public function TMII()
+
+
+    public function login()
     {
-        $this->load->view('dufan');
+        $this->load->view('templates/header');
+        $this->load->view('pages/login');
+        $this->load->view('templates/footer');
     }
 }
