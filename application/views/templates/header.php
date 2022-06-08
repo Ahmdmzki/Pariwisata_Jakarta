@@ -44,16 +44,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">The Jakarta Tour</a>
+            <a class="navbar-brand" href=".">The Jakarta Tour</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav navbar-right navbar-link">
-                <li><a href="#banner">Home</a></li>
-                <li><a href="#todo">Wisata</a></li>
-                <li><a href="#video-sec">Video</a></li>
-                <li><a href="#contact-sec">Kontak Kami</a></li>
-                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href=".">Home</a></li>
+                <li><a href="login">Login</a></li>
             </ul>
         </div>
         <!--/.nav-collapse -->

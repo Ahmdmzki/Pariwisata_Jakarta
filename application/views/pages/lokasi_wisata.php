@@ -1,5 +1,5 @@
 <section id="todo" class="parallax">
-    <div>
+    <div style="color: white; padding: 1rem;">
         <h1><?= $nama_lokasi; ?></h1>
         <p>DESKRIPSI: <?= $deskripsi; ?></p>
         <p>ALAMAT: <?= $alamat; ?></p>

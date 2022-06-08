@@ -32,4 +32,12 @@ class Wisata extends CI_Controller
         $this->load->view('pages/lokasi_wisata', $data);
         $this->load->view('templates/footer', $data);
     }
+
+
+    public function login()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('pages/login');
+        $this->load->view('templates/footer');
+    }
 }
