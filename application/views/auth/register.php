@@ -1,8 +1,9 @@
 <section id="todo" class="parallax">
-    <div style="color: white; padding: 1rem;">
+    <div style="color: white; padding: 1rem; height: 100%;">
         <form action="register" method="post">
             <h3>Register</h3>
             <Label>Username</Label>
+            <br>
             <input name="username" style="color: black;" type="text">
             <?= form_error('username'); ?>
             <br>
