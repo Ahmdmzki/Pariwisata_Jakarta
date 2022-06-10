@@ -34,6 +34,8 @@
     </div>
 </div>
 
+
+
 <!------------Static navbar ------------>
 <nav class="navbar navbar-default top-bar affix" data-spy="affix" data-offset-top="250">
     <div class="container">
@@ -50,7 +52,16 @@
 
             <ul class="nav navbar-nav navbar-right navbar-link">
                 <li><a href=".">Home</a></li>
-                <li><a href="login">Login</a></li>
+                <?php
+                $name = $this->session->userdata('username');
+                if ($this->session->has_userdata('id')) {
+                    echo " <li><a href='logout'>Logout</a></li>";
+                    echo " <li><a href=''>" . $name . "</a></li>";
+                } else {
+                    echo ' <li><a href="login">Login</a></li>';
+                    echo '<li><a href="register">Register</a></li>';
+                }
+                ?>
             </ul>
         </div>
         <!--/.nav-collapse -->
