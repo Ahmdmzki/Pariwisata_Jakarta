@@ -31,16 +31,17 @@ class Wisata extends CI_Controller
         $this->data = $lokasiPariwisata->ambilDataLokaisPariwisata($nama_lokasi);
     }
 
-    private function showLokasiWisataPage(){
+    private function showLokasiWisataPage()
+    {
         $this->load->view('templates/header');
 
         if (!$this->data) {
             $this->load->view('pages/lokasi_tidak_valid');
         } else {
             $this->load->view('pages/lokasi_wisata', $this->data);
+            $this->load->view('pages/komentar');
         }
 
         $this->load->view('templates/footer');
     }
-
 }
