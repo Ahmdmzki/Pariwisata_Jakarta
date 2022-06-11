@@ -43,15 +43,15 @@ class Users extends CI_Model
         if ($this->form_validation->run() == false) {
             return;
         }
-        $auth_data = $this->getAuthData();
-        $login_query = $this->db->get_where($this->users_table, $auth_data, 1);
-        $row = $login_query->row_array();
-        if ($row  == null) {
-            $this->session->set_flashdata("message", "<p style='color: red; margin: 1rem'>Login Failed, Username or Password is incorrect</p>");
+
+        $user_login_data = $this->retrieveUserDataForLogin();
+
+        if ($user_login_data  == null) {
+            $this->setMessageLoginFailedFlashdata();
             return;
-        } else {
-            $this->setUserSession($row['username'], $row['password']);
         }
+        
+        $this->setUserSession($user_login_data['username'], $user_login_data['password']);
     }
 
     public function setLoginRules()
@@ -66,6 +66,13 @@ class Users extends CI_Model
         redirect(".");
     }
 
+    private function retrieveUserDataForLogin()
+    {
+        $auth_data = $this->getAuthData();
+        $login_query = $this->db->get_where($this->users_table, $auth_data, 1);
+        return  $login_query->row_array();
+    }
+
     /**
      * Get Username & Password 
      * @return Array<String|Key, String|Value>
@@ -76,6 +83,11 @@ class Users extends CI_Model
         $username = $this->input->post("username");
         $password = $this->input->post("password");
         return ['username' => $username, 'password' => $password];
+    }
+
+    private function setMessageLoginFailedFlashdata()
+    {
+        $this->session->set_flashdata("message", "<p style='color: red; margin: 1rem'>Login Failed, Username or Password is incorrect</p>");
     }
 
     private function sendDataRegistrationToDatabase(string $username, string $password)

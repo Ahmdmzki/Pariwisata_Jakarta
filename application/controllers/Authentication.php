@@ -8,7 +8,6 @@ class Authentication extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->library('session');
-
         $this->users = new Users();
     }
 
@@ -22,7 +21,6 @@ class Authentication extends CI_Controller
     public function register()
     {
         $this->users->setRegisterRules();
-
         $this->users->register();
         $this->loadRegisterView();
     }

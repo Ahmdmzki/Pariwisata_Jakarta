@@ -38,9 +38,9 @@
 </style>
 
 <body bgcolor="white">
-    <div align="center">
+    <div align="center" style="height: 100vh; box-sizing:border-box ;">
         <section id="todo" class="parallax">
-            <div style="box-shadow: -10px -10px 10px 21px rgba(0,0,0,0.35); background-color: radial-gradient(#f05053 50%, #e1eec3); color: white; padding-top: 1rem; padding-bottom: 4rem ; width: 30% ;height: 30% ;">
+            <div style="box-shadow: -10px -10px 10px 21px rgba(0,0,0,0.35); background-color: radial-gradient(#f05053 50%, #e1eec3); color: white; padding-top: 1rem; padding-bottom: 4rem ; width: 30% ;height: 40% ;">
                 <form action="login" method="POST">
                     <h3 style="font-family:times new roman; color: white;">LOGIN</h3>
                     <Label>Username</Label>
