@@ -9,9 +9,9 @@
         font-family: Verdana, Arial, Helvetica, sans-serif;
         font-size: 15px;
         height: 30px;
-        border-radius: 1rem;
+        border-radius: 8px;
         padding: 1rem;
-
+        margin-bottom: 1rem;
     }
 
     div {
@@ -23,15 +23,24 @@
     }
 
     button {
-        border-radius: 1rem;
-        padding: 3%;
+        border-radius: 8px;
+        border-color: gray;
+        padding: 8px;
+        color: black;
+
+    }
+
+    a,
+    b {
+        color: black;
+
     }
 </style>
 
-<body bgcolor="white"><br />
+<body bgcolor="white">
     <div align="center">
         <section id="todo" class="parallax">
-            <div style="box-shadow: -10px -10px 10px 21px rgba(0,0,0,0.35); background-color: radial-gradient(#f05053 50%, #e1eec3); color: black; padding: 6rem; width: 30% ;height: 30% ;">
+            <div style="box-shadow: -10px -10px 10px 21px rgba(0,0,0,0.35); background-color: radial-gradient(#f05053 50%, #e1eec3); color: white; padding-top: 1rem; padding-bottom: 4rem ; width: 30% ;height: 30% ;">
                 <form action="login" method="POST">
                     <h3 style="font-family:times new roman; color: white;">LOGIN</h3>
                     <Label>Username</Label>
@@ -46,8 +55,7 @@
                     <?= form_error('password'); ?>
                     <br>
                     <br>
-                    <button type="submit" style="font-family: 'Times New Roman', Times, serif; color: #6495ED;"><b>LOGIN</b></button>
-                    <button type="submit" style="font-family: 'Times New Roman', Times, serif; color: blue;"><b><a href="register">REGISTER</a></b></button>
+                    <button type="submit" style="font-family: 'Times New Roman', Times, serif; color: #6495ED;"><b>SUBMIT</b></button>
                     <?php
                     $message = $this->session->flashdata('message');
                     if (isset($message)) {

@@ -47,7 +47,7 @@ class Users extends CI_Model
         $login_query = $this->db->get_where($this->users_table, $auth_data, 1);
         $row = $login_query->row_array();
         if ($row  == null) {
-            $this->session->set_flashdata("message", "<p style='color: red;'>Login Failed, Username or Password is incorrect</p>");
+            $this->session->set_flashdata("message", "<p style='color: red; margin: 1rem'>Login Failed, Username or Password is incorrect</p>");
             return;
         } else {
             $this->setUserSession($row['username'], $row['password']);

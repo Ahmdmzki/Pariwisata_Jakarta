@@ -2,8 +2,6 @@
 
 class Authentication extends CI_Controller
 {
-
-    private $users_table = "users";
     private $users;
     function __construct()
     {
@@ -18,7 +16,6 @@ class Authentication extends CI_Controller
     {
         $this->users->setLoginRules();
         $this->users->login();
-
         $this->loadLoginView();
     }
 
@@ -43,6 +40,7 @@ class Authentication extends CI_Controller
         $this->load->view('auth/register');
         $this->load->view('templates/footer');
     }
+
 
     private function loadLoginView()
     {
