@@ -34,7 +34,8 @@ class LokasiPariwisata extends CI_Model
         return $row;
     }
 
-    public function kirim_ulasan(string $nama_lokasi, string $ulasan)
+    public function kirim_ulasan(string $user_id, string $lokasi_slug, string $komentar)
     {
+        
     }
 }

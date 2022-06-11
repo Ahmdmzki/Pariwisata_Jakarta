@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Users', 'LokasiPariwisata');
+$autoload['model'] = array('Users', 'LokasiPariwisata', 'KomentarLokasi');

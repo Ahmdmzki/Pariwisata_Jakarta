@@ -2,15 +2,12 @@
 
 class Authentication extends CI_Controller
 {
-
-    private $users_table = "users";
     private $users;
     function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->library('session');
-
         $this->users = new Users();
     }
 
@@ -18,14 +15,12 @@ class Authentication extends CI_Controller
     {
         $this->users->setLoginRules();
         $this->users->login();
-
         $this->loadLoginView();
     }
 
     public function register()
     {
         $this->users->setRegisterRules();
-
         $this->users->register();
         $this->loadRegisterView();
     }
@@ -43,6 +38,7 @@ class Authentication extends CI_Controller
         $this->load->view('auth/register');
         $this->load->view('templates/footer');
     }
+
 
     private function loadLoginView()
     {
