@@ -79,12 +79,12 @@
     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
       <div class="feature-thumb">
         <div class="icon">
-          <span><img class="img-responsive" src="assets/img/icon4.png" /></span>
+          <span><img class="img-responsive" src="assets/img/icon7.jpg" /></span>
         </div>
-        <h3>Taman Impian Jaya Ancol</h3>
+        <h3>Pantai Ancol</h3>
         <p>Jl. Lodan Timur No.7, RW.10, Ancol, Kec. Pademangan, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14430</p>
         <br></br>
-        <a href="taman-impian-jaya-ancol" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
+        <a href="pantai-ancol" class="btn btn-capsul btn-transparent-prime">Explore Now</a>
       </div>
     </div>
 
