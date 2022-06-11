@@ -43,7 +43,7 @@
             <div style="box-shadow: -10px -10px 10px 21px rgba(0,0,0,0.35); background-color: radial-gradient(#f05053 50%, #e1eec3); color: white; padding-top: 1rem; padding-bottom: 3rem ; width: 30% ;height: auto ;">
                 <form action="login" method="POST">
                     <h3 style="font-family:times new roman; color: white;">LOGIN</h3>
-                    <Label>Username</Label>
+                    <Label>Username</Label>;
                     <br>
                     <input name="username" style="color: black;" type="text" placeholder="Username">
                     <?= form_error('username'); ?>

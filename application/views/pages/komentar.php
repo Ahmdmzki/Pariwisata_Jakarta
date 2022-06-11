@@ -18,12 +18,27 @@
 <section id="todo" class="parallax" style="color: white; padding: 1rem;">
 
     <div class="comment-form">
-        <?php if ($this->session->has_userdata('id')) { ?>
-            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Tulis komentar anda di sini!"></textarea>
-            <button class="btn btn-capsul btn-transparent-prime">Tambah Komentar</button>
+
+        <?php
+        $komentar_model = new KomentarLokasi();
+        $nama_input = $komentar_model->komentar_input_name;
+        if ($this->session->has_userdata('id')) { ?>
+
+            <!--Komentar Input HTML -->
+            <form method="post" action=<?= $slug; ?>>
+                <textarea name=<?= $nama_input; ?> rows="4" cols="50" placeholder="Tulis komentar anda di sini!"></textarea>
+                <?= form_error($nama_input); ?>
+                <button type="submit" class="btn btn-capsul btn-transparent-prime">Tambah Komentar</button>
+            </form>
+            <!--Komentar Input HTML -->
+
         <?php } else { ?>
+
             <p>Anda harus login atau register terlebih dahulu untuk memberi komentar!</p>
+
         <?php } ?>
+
+
     </div>
     <h3>Komentar</h3>
     <h4>Your Username</h4>
