@@ -62,7 +62,6 @@
                     echo '<li><a href="register">Register</a></li>';
                 }
                 ?>
-            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>
