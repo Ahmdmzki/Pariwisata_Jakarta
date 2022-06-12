@@ -41,7 +41,7 @@ class Wisata extends CI_Controller
         }
     }
 
-    public function editKomentar(string $komentar_id,)
+    public function editKomentar(string $komentar_id)
     {
         if ($this->session->has_userdata('id') == false) {
             return;
@@ -61,6 +61,12 @@ class Wisata extends CI_Controller
 
         $this->komentar_lokasi_model->updateComment($komentar_id, $comment_data['username'], $comment_data['lokasi_id']);
         redirect('../' . $comment_data['lokasi_id']);
+    }
+
+    public function hapusKomentar(string $komentar_id, string $lokasi_slug)
+    {
+        $this->komentar_lokasi_model->deleteComment($komentar_id);
+        redirect('../../' . $lokasi_slug);
     }
 
     private function kirimKomentar(): void

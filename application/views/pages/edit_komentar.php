@@ -38,8 +38,9 @@
                 ); ?>
                 <br>
                 <button type="submit" class="btn btn-capsul btn-transparent-prime">Ubah Komentar</button>
-                <button type="submit" class="btn btn-capsul btn-transparent-prime">Hapus</button>
             </form>
+            <button class="btn btn-capsul btn-transparent-prime"><a href=<?= '../hapus-komentar/' . $comment_data['id'] . '/' . $comment_data['lokasi_id']; ?>>Hapus</a></button>
+
             <!--Komentar Input HTML -->
 
 

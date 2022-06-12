@@ -60,6 +60,12 @@ class KomentarLokasi extends CI_Model
         $this->db->replace($this->table_komentar, $data);
     }
 
+    public function deleteComment(string $comment_id)
+    {
+
+        $this->db->delete($this->table_komentar, array('id' => $comment_id));
+    }
+
     //TODO Update / delete comments
     // show the edit if the comment is from the authd user
     // open edit komentar page view 
