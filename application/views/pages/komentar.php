@@ -50,22 +50,15 @@
     foreach ($comments as $comment) {
         echo "<h4>" . $comment["username"] . "</h4>";
 
+        $edit_route ='komentar/' . $comment['id'];
         if ($comment["username"] == $username) {
-            echo "<a>" . "Edit" . "</a>";
+            echo "<a href=" . $edit_route . ">" . "Edit" . "</a>";
         }
         echo "<p style='color:gray ;'>" . $comment["date"] . "</p>";
         echo "<p>" . $comment["komentar"] . "</p>";
         echo "<br/>";
     }
-    //TODO Update / delete comments
-    // show the edit if the comment is from the authd user
-    // open edit komentar page view 
-    // show textarea with the value of the comment here
-    // change it 
-    // or press the delete button to delete it
-    // confirm
-    // check again to see if the $user_id is equal to the $user_id from the $tabel_komentar
-    // if the check is true, update the database
+
     ?>
 
 </section>

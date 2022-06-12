@@ -31,7 +31,6 @@ class Wisata extends CI_Controller
     {
         $this->lokasi_slug = $nama_lokasi;
         $this->fetchDataLokasi();
-
         $this->komentar_lokasi_model->setCommentRules();
         if ($this->form_validation->run() == false) {
             $this->showLokasiWisataPage();
@@ -42,6 +41,27 @@ class Wisata extends CI_Controller
         }
     }
 
+    public function editKomentar(string $komentar_id,)
+    {
+        if ($this->session->has_userdata('id') == false) {
+            return;
+        }
+        // retrieve comment by id
+        // send comment data to view
+        $comment_data =  $this->komentar_lokasi_model->getCommentById($komentar_id);
+        $data['comment_data'] = $comment_data;
+        $this->komentar_lokasi_model->setCommentRules();
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header');
+            $this->load->view('pages/edit_komentar', $data);
+            $this->load->view('templates/footer');
+            return;
+        }
+
+        $this->komentar_lokasi_model->updateComment($komentar_id, $comment_data['username'], $comment_data['lokasi_id']);
+        redirect('../' . $comment_data['lokasi_id']);
+    }
 
     private function kirimKomentar(): void
     {

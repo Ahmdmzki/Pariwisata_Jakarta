@@ -10,8 +10,9 @@ class KomentarLokasi extends CI_Model
     {
         $komentar = $this->input->post($this->komentar_input_name);
         $date = date('Y-m-d H:i:s');
+        $number = rand();
         $data = [
-            'id' => $username . $date,
+            'id' => $username . $number,
             'username' =>  $username,
             'lokasi_id' => $lokasi_slug,
             'komentar' => $komentar,
@@ -33,20 +34,39 @@ class KomentarLokasi extends CI_Model
         if (!$comments_query) {
             return [];
         }
-        $comments= array_reverse($comments_query->result_array());
+        $comments = array_reverse($comments_query->result_array());
         return $comments;
     }
 
     public function getCommentById(string $id)
     {
-        // TODO get comment by id
-        // use this function for editing comment in the edit-comment view
-        // get the comment value and add it in the textarea inside edit-comment view
+        $id_condition = ['id' => $id];
+        $comment = $this->db->get_where($this->table_komentar, $id_condition, 1);
+        return  $comment->row_array();
     }
 
-    // See all comment based of the location page
+    public function updateComment(string $comment_id, string $username, string $lokasi_slug)
+    {
+        $komentar = $this->input->post($this->komentar_input_name);
+        $date = date('Y-m-d H:i:s');
+        $data = [
+            'id' => $comment_id,
+            'username' =>  $username,
+            'lokasi_id' => $lokasi_slug,
+            'komentar' => $komentar,
+            'date' => $date
+        ];
 
-    // Update comment
-    // Can only edit owned comment
-    // Create a check with $user_id from $table_komentar and $id from $users_table. Both of these must equall to confirm edited comment and push it to the db
+        $this->db->replace($this->table_komentar, $data);
+    }
+
+    //TODO Update / delete comments
+    // show the edit if the comment is from the authd user
+    // open edit komentar page view 
+    // show textarea with the value of the comment here
+    // change it 
+    // or press the delete button to delete it
+    // confirm
+    // check again to see if the $user_id is equal to the $user_id from the $tabel_komentar
+    // if the check is true, update the database
 }
