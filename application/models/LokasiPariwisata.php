@@ -9,18 +9,7 @@
 
 class LokasiPariwisata extends CI_Model
 {
-    public function ambilSemuaLokasiPariwisata()
-    {
-    }
 
-
-    /**
-     * mengambil data lokasi wisata yang ada di database berdasarkan nama lokasi yang diubah menjadi slug
-     *
-     * @param string  $slug_nama_lokasi  
-     * @author Herdy Hardiyant
-     * @return Array
-     */
     public function ambilDataLokaisPariwisata(string $slug_nama_lokasi)
     {
         $query = $this->db->query("SELECT * FROM lokasi_pariwisata WHERE slug = '" . $slug_nama_lokasi . "'");
@@ -32,10 +21,5 @@ class LokasiPariwisata extends CI_Model
         $row = $query->row_array();
 
         return $row;
-    }
-
-    public function kirim_ulasan(string $user_id, string $lokasi_slug, string $komentar)
-    {
-        
     }
 }

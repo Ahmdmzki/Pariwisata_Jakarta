@@ -56,7 +56,7 @@
                 $name = $this->session->userdata('username');
                 if ($this->session->has_userdata('id')) {
                     echo " <li><a href='logout'>Logout</a></li>";
-                    echo " <li><a href=''>" . $name . "</a></li>";
+                    echo " <li><a  style='font-weight:bold ;' href=''>" . $name . "</a></li>";
                 } else {
                     echo ' <li><a href="login">Login</a></li>';
                     echo '<li><a href="register">Register</a></li>';

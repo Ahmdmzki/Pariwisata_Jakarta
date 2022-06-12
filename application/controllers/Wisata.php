@@ -10,53 +10,76 @@
 class Wisata extends CI_Controller
 {
 
-    private $data;
+    private $data_lokasi_wisata;
+    private string $lokasi_slug;
+    private KomentarLokasi $komentar_lokasi_model;
 
-    public function home()
+    function __construct()
+    {
+        parent::__construct();
+        $this->komentar_lokasi_model = new KomentarLokasi();
+    }
+
+    public function home(): void
     {
         $this->load->view('templates/header');
         $this->load->view('pages/home');
         $this->load->view('templates/footer');
     }
 
-    public function view_lokasi(string $nama_lokasi)
+    public function view_lokasi(string $nama_lokasi): void
     {
-        $this->fetchDataLokasi($nama_lokasi);
-        $this->komentarLokasi($nama_lokasi);
+        $this->lokasi_slug = $nama_lokasi;
+        $this->fetchDataLokasi();
+        $this->komentarLokasi();
         $this->showLokasiWisataPage();
     }
 
-    private function komentarLokasi(string $nama_lokasi)
+    private function komentarLokasi(): void
     {
-        $komentar_model = new KomentarLokasi();
-        $komentar_model->setCommentRules();
-        $nama_input = $komentar_model->komentar_input_name;
-        if ($this->form_validation->run()) {
-            // Send data to db
-            $comment = $this->input->post($nama_input);
-            echo '<script>alert("' . $comment . '")</script>';
+        $this->komentar_lokasi_model->setCommentRules();
+        $this->kirimKomentar();
+    }
+
+    private function kirimKomentar(): void
+    {
+        if ($this->session->has_userdata('id') == false) {
+            return;
         }
+        if ($this->form_validation->run() == false) {
+            return;
+        }
+
+        $user_id =  $this->session->userdata('id');
+        $this->komentar_lokasi_model->addNewComment($user_id, $this->lokasi_slug);
     }
 
 
-    private function fetchDataLokasi(string $nama_lokasi)
+    private function fetchDataLokasi(): void
     {
         $lokasiPariwisata = new LokasiPariwisata();
-        $this->data = $lokasiPariwisata->ambilDataLokaisPariwisata($nama_lokasi);
+        $this->data_lokasi_wisata = $lokasiPariwisata->ambilDataLokaisPariwisata($this->lokasi_slug);
     }
 
 
-    private function showLokasiWisataPage()
+    private function showLokasiWisataPage(): void
     {
         $this->load->view('templates/header');
 
-        if (!$this->data) {
+        if (!$this->data_lokasi_wisata) {
             $this->load->view('pages/lokasi_tidak_valid');
         } else {
-            $this->load->view('pages/lokasi_wisata', $this->data);
-            $this->load->view('pages/komentar',  $this->data);
+            $this->load->view('pages/lokasi_wisata', $this->data_lokasi_wisata);
+            $this->setupLocationCommentsView();
         }
 
         $this->load->view('templates/footer');
+    }
+
+    private function setupLocationCommentsView(): void
+    {
+        //TODO Retrieve comments data_lokasi_wisata & show it here
+        // $this->komentar_lokasi_model->retrieveAllCommentsByLocation($this->lokasi_slug);
+        $this->load->view('pages/komentar',  $this->data_lokasi_wisata);
     }
 }

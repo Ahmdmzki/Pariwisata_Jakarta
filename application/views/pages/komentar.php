@@ -21,26 +21,45 @@
 
         <?php
         $komentar_model = new KomentarLokasi();
-        $nama_input = $komentar_model->komentar_input_name;
+        $nama_input_komentar
+            = $komentar_model->komentar_input_name;
         if ($this->session->has_userdata('id')) { ?>
 
             <!--Komentar Input HTML -->
             <form method="post" action=<?= $slug; ?>>
-                <textarea name=<?= $nama_input; ?> rows="4" cols="50" placeholder="Tulis komentar anda di sini!"></textarea>
-                <?= form_error($nama_input); ?>
+                <textarea name=<?= $nama_input_komentar; ?> rows="4" cols="50" placeholder="Tulis komentar anda di sini!"></textarea>
+                <?= form_error(
+                    $nama_input_komentar
+                ); ?>
                 <button type="submit" class="btn btn-capsul btn-transparent-prime">Tambah Komentar</button>
             </form>
             <!--Komentar Input HTML -->
 
         <?php } else { ?>
 
-            <p>Anda harus login atau register terlebih dahulu untuk memberi komentar!</p>
+            <p style="font-weight:bold ;">Anda harus login atau register terlebih dahulu untuk memberi komentar!</p>
 
         <?php } ?>
 
 
     </div>
+
     <h3>Komentar</h3>
+    <?php
+    // foreach ($comments as $comment) {
+    //     echo "<h4>" . $comment["user_id"] . "</h4>";
+    //     echo "<p>" . $comment["komentar"] . "</p>";
+    // }
+    //TODO Update / delete comments
+    // show the edit if the comment is from the authd user
+    // open edit komentar page view 
+    // show textarea with the value of the comment here
+    // change it 
+    // or press the delete button to delete it
+    // confirm
+    // check again to see if the $user_id is equal to the $user_id from the $tabel_komentar
+    // if the check is true, update the database
+    ?>
     <h4>Your Username</h4>
     <a href="">Edit</a>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
