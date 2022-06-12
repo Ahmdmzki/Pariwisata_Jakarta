@@ -6,15 +6,16 @@ class KomentarLokasi extends CI_Model
     private $table_komentar = "komentar_lokasi";
 
     // Create new comment
-    public function addNewComment(string $user_id, string $lokasi_slug)
+    public function addNewComment(string $username, string $lokasi_slug)
     {
         $komentar = $this->input->post($this->komentar_input_name);
         $date = date('Y-m-d H:i:s');
         $data = [
-            'id' => $user_id . $date,
-            'user_id' =>  $user_id,
+            'id' => $username . $date,
+            'username' =>  $username,
             'lokasi_id' => $lokasi_slug,
-            'komentar' => $komentar
+            'komentar' => $komentar,
+            'date' => $date
         ];
 
         $this->db->insert($this->table_komentar,  $data);
@@ -32,7 +33,15 @@ class KomentarLokasi extends CI_Model
         if (!$comments_query) {
             return [];
         }
-        return $comments_query->row_array();
+        $comments= array_reverse($comments_query->result_array());
+        return $comments;
+    }
+
+    public function getCommentById(string $id)
+    {
+        // TODO get comment by id
+        // use this function for editing comment in the edit-comment view
+        // get the comment value and add it in the textarea inside edit-comment view
     }
 
     // See all comment based of the location page

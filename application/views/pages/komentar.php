@@ -46,10 +46,17 @@
 
     <h3>Komentar</h3>
     <?php
-    // foreach ($comments as $comment) {
-    //     echo "<h4>" . $comment["user_id"] . "</h4>";
-    //     echo "<p>" . $comment["komentar"] . "</p>";
-    // }
+    $username = $this->session->userdata('username');
+    foreach ($comments as $comment) {
+        echo "<h4>" . $comment["username"] . "</h4>";
+
+        if ($comment["username"] == $username) {
+            echo "<a>" . "Edit" . "</a>";
+        }
+        echo "<p style='color:gray ;'>" . $comment["date"] . "</p>";
+        echo "<p>" . $comment["komentar"] . "</p>";
+        echo "<br/>";
+    }
     //TODO Update / delete comments
     // show the edit if the comment is from the authd user
     // open edit komentar page view 
@@ -60,16 +67,5 @@
     // check again to see if the $user_id is equal to the $user_id from the $tabel_komentar
     // if the check is true, update the database
     ?>
-    <h4>Your Username</h4>
-    <a href="">Edit</a>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.</p>
-    <br>
-    <h4>Username</h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-        optio, eaque rerum! Provident similique accusantium nemo autem.</p>
+
 </section>

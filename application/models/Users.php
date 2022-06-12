@@ -50,7 +50,7 @@ class Users extends CI_Model
             $this->setMessageLoginFailedFlashdata();
             return;
         }
-        
+
         $this->setUserSession($user_login_data['username'], $user_login_data['password']);
     }
 
@@ -62,7 +62,9 @@ class Users extends CI_Model
 
     public function logout()
     {
-        $this->session->unset_userdata('id', 'username');
+        $this->session->unset_userdata('id');
+        $this->session->unset_userdata('username');
+
         redirect(".");
     }
 
